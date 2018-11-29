@@ -26,5 +26,4 @@ const TextInputButton = ({
   return <Core classes={newClasses[variant]} {...restProps} />;
 };
 
-
 export default withStyles(stylesheet)(TextInputButton);

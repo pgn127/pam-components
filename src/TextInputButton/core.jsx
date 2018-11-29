@@ -1,11 +1,11 @@
 
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import Popover from 'material-ui/Popover';
-import Arrow from 'customerImages/landingpage/v2/icons/form/enterArrowGrey';
-import ArrowError from 'customerImages/landingpage/v2/icons/form/enterArrowDisabled';
-import ArrowValid from 'customerImages/landingpage/v2/icons/form/enterArrowBlue';
-import exclamationWhite from 'customerImages/landingpage/v2/icons/form/exclamationWhite';
+import Popover from '@material-ui/core/Popover';
+// import Arrow from 'customerImages/landingpage/v2/icons/form/enterArrowGrey';
+// import ArrowError from 'customerImages/landingpage/v2/icons/form/enterArrowDisabled';
+// import ArrowValid from 'customerImages/landingpage/v2/icons/form/enterArrowBlue';
+// import exclamationWhite from 'customerImages/landingpage/v2/icons/form/exclamationWhite';
 
 
 class TextInputButton extends Component {
@@ -55,12 +55,12 @@ class TextInputButton extends Component {
       focus,
     } = this.state;
 
-    let arrowIcon = Arrow;
-    if (error) {
-      arrowIcon = ArrowError;
-    } else if (isValid) {
-      arrowIcon = ArrowValid;
-    }
+    let arrowIcon;// = Arrow;
+    // if (error) {
+    //   arrowIcon = ArrowError;
+    // } else if (isValid) {
+    //   arrowIcon = ArrowValid;
+    // }
 
     let borderClass = classes.borderNormal;
 
@@ -85,7 +85,7 @@ class TextInputButton extends Component {
             ref={(ref) => { this.anchorEl = ref; }}
           />
           {showSubmit && <div className={classes.submitButton} onMouseDown={() => !disabled && onSubmit(text)}>
-            { SubmitIconComponent || <img src={ submitIcon || arrowIcon} /> }
+            {/* { SubmitIconComponent || <img src={ submitIcon || arrowIcon} /> } */}
            </div>
           }
           <Popover
@@ -102,7 +102,7 @@ class TextInputButton extends Component {
               horizontal: 'left',
             }}
           >
-            <img src={exclamationWhite} className={classes.exclamation}/>
+            {/* <img src={exclamationWhite} className={classes.exclamation}/> */}
             {error}
           </Popover>
         </div>
